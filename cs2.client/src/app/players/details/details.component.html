@@ -1,0 +1,25 @@
+<div class="container">
+  <br />
+  <h3>Player Details</h3>
+  <br />
+  <div class="card">
+    <div class="card-header">
+      <div class="row">
+        <div class="col">
+          <h4>{{ player.playerName }}</h4>
+        </div>
+        <div class="col text-right">
+          <a href="#" routerLink="/players/list" class="btn btn-secondary btn-sm">Back To Players List</a>
+        </div>
+      </div>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><b>Id:</b> {{ player.id }}</li>
+      <li class="list-group-item"><b>Player Nickname:</b> {{ player.ingameName }}</li>
+      <li class="list-group-item"><b>Team:</b> {{ player.team?.name }}</li>
+      <li class="list-group-item"><b>Nationality:</b> {{ player.nationality }}</li>
+      <li class="list-group-item"><b>Player Earnings:</b> {{ player.salary }}</li>
+      <li class="list-group-item"><b>Availability:</b> {{ player.isActive ? "Active": "Non-Active" }}</li>
+    </ul>
+  </div>
+</div>
